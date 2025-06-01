@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container{
+    display: block;
+    text-align: center;
+    height: 100vh;
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.container h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 80px;
+    font-weight: bolder;
+    color: black;
+    text-align: center;
+    margin-top: 50px;
+}
+.container p {
+    font-size: 35px;
+    font-weight: normal;
+    color: black;
+    line-height: 1.5;
+    margin: 50px 0 15px;
+    text-align: center;
+}
+.container .buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    position: relative;
+}
+#quoteButton, #resetButton {
+    position: absolute;
+    width: 250px;
+    height: 80px;
+    font-size: 30px;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#resetButton {
+    visibility: hidden;
+    animation: reset 1s infinite;
+}
+
+#quoteButton:hover, #resetButton:hover {
+    background-color: green;
+}
+
+#quote{
+    font-size: 35px;
+    color: black;
+    text-align: center;
+    margin-top: 100px;
+    visibility: hidden;
+}
+
+#author{
+    font-size: 35px;
+    color: black;
+    text-align: center;
+    visibility: hidden;
+}
+
+.counterBox{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: blue;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@keyframes reset {
+    0% {scale: 1;}
+    40% {scale: 1.1;}
+    60% {scale: 1,2;}
+    80% {scale: 1.1;}
+    100% {scale: 1;}
+}
